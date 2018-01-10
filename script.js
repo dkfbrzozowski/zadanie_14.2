@@ -2,19 +2,34 @@ var movies = [
   {
   	id: 1,
     title: 'Harry Potter',
-    desc: 'film o czarodzieju'
+    desc: 'film o czarodzieju',
+    img: 'http://via.placeholder.com/350x150'
   },
   {
   	id: 2,
     title: 'Król Lew',
-    desc: 'Film o królu sawanny'
+    desc: 'Film o królu sawanny',
+    img: 'http://via.placeholder.com/350x150'
+  },
+  {
+    id: 3,
+    title: 'Gladiator',
+    desc: 'film o gladiatorze, który zabił cesarza',
+    img: 'http://via.placeholder.com/350x150'
+  },
+  {
+    id: 4,
+    title: 'Star Wars: Powrót Jedi',
+    desc: 'jeden z filmów sagi Star Wars',
+    img: 'http://via.placeholder.com/350x150'
   }
 ];
 
 var moviesElements = movies.map(function(movie) {
   return React.createElement('li', {key: movie.id},
       React.createElement('h2', {}, movie.title),
-      React.createElement('p', {}, movie.desc)
+      React.createElement('p', {}, movie.desc),
+      React.createElement('img', {src: movie.img})
     );
 });
 
